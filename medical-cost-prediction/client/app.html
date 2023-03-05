@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Cost Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Age</h2>
+    <input class="age"  type="text" id="uiAge" class="floatLabel" name="Age" value="21">
+
+	<h2>Bmi</h2>
+    <input class="bmi"  type="text" id="uiBmi" class="floatLabel" name="Bmi" value="25">
+
+	<h2>Gender</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-Gender-1" name="uiGender" value="0" checked/>
+		<label for="radio-Gender-1">Female</label>
+		<input type="radio" id="radio-Gender-2" name="uiGender" value="1"/>
+		<label for="radio-Gender-2">Male</label>
+	</div>
+	
+	</form>
+
+<form class="form">
+	<h2>Do You Smoke?</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-Smoke-1" name="uiSmoke" value="0" checked/>
+		<label for="radio-Smoke-1">No</label>
+		<input type="radio" id="radio-Smoke-2" name="uiSmoke" value="1"/>
+		<label for="radio-Smoke-2">Yes</label>
+	</div>
+
+	<h2>How Many Children Do You have?</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-Children-1" name="uiChildren" value="0"/>
+		<label for="radio-Children-1">0</label>
+		<input type="radio" id="radio-Children-2" name="uiChildren" value="1" checked/>
+		<label for="radio-Children-2">1</label>
+		<input type="radio" id="radio-Children-3" name="uiChildren" value="2"/>
+		<label for="radio-Children-3">2</label>
+		<input type="radio" id="radio-Children-4" name="uiChildren" value="3"/>
+		<label for="radio-Children-4">3</label>
+		<input type="radio" id="radio-Children-5" name="uiChildren" value="4"/>
+		<label for="radio-Children-5">4</label>
+	</div>
+
+		<h2>Region</h2>
+	<div>
+  <select class="Region" name="" id="uiRegion">
+    <option value="" disabled="disabled" selected="selected">Choose a region</option>
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Cost</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
